@@ -8,9 +8,9 @@
 $(function() {
   if (window.location.pathname == "/courses/" + ENV.COURSE_ID + "/settings") {
     if($.inArray("admin", ENV.current_user_roles) == -1) {
-        $("#course_self_enrollment").hide();
-        $("label[for='course_self_enrollment']").hide();
-        $(".open_enrollment_holder").hide();
+        $("#course_start_at").prop("disabled", true);
+        $("#course_conclude_at").prop("disabled", true);
+        $(".ui-datepicker-trigger").prop("disabled", true);
     }
   }
 });
